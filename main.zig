@@ -18,18 +18,25 @@ pub fn main() void {
     // optional
     // what do this means ?
     var optional_value: ?[]const u8 = null;
-    assert (optional_value == null);
+    assert(optional_value == null);
 
-    print("\n optional 1 \n type: {s} \n value: {s} \n", 
-        .{@typeName(@TypeOf(optional_value))},
-        optional_value
-    )
-    // Wow, crack ! 
-    // catch sight of reading, 
-    // the first print : get Type 
+    print("\n optional 1 \n type: {s} \n value: {s} \n", .{@typeName(@TypeOf(optional_value))}, optional_value);
+    // Wow, crack !
+    // catch sight of reading,
+    // the first print : get Type
     // the second print : print value
-    
+
     // So, firstly let complie or something else to know type of optional_value
     // And there is not simple string , maybe some struct, or object concept.
     // Then use @typeName to get the value of type for string type.
+
+    // Multiline String Literals
+    const hello_world_in_c =
+        \\#include <stdio.h>
+        \\
+        \\int main(int argc, char **argv) {
+        \\    print("hello world\n");
+        \\    return 0;
+        \\}
+    ;
 }
